@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LostCore Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">LostCore Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="familia.html">Familia de navegadores </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentacion.html">Documentacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/TechAppsSv/LostCore">GitHub </a>
+            </li>
+            
+        </div>
+      </nav>
+</head>
+<body style="background: black; color: white;">
+    <h6 style="color: white;">
+    Documentacion para desarrolladores 
+    </h6>
+    <br>
+    <h1 style="color: white; text-align: center; ">1.Empezando</h1>
+   <h2 style="color: white; ">Preparacion del entorno de trabajo</h2>
+ <h7 style="color: white; text-align: center;">
+LostCore es un proyecto muy sencillo pero que le da la base a cualquier programador de crear su propio navegador
+
+Este esta hecho con el framework ElectronJs este corre con el motor V8  entonces este puede usar las dev tools de chromium
+<br>
+Requisitos:
+<br>
+Sistema Operativo: Windows, Ubuntu, MacOs
+RAM: 4GB 
+Disco Duro: 300MB 
+Requerimientos Adicionales: NodeJs 10 Minimo
+Conocimientos requeridos: HMTL,JS, Git
+
+</h7>
+<br>
+<br>
+<h2 style="color: white; ">Obtencion del codigo fuente</h2>
+ <h7 style="color: white; text-align: center;">
+El codigo fuente es almacenado y actualizado en GitHub usted necesitara descargarlo desde Git
+<br>
+debe de ejecutar lo siguiente desde su terminal con Git:
+<p style="color: black; background: white; width: 500px; border-radius: 5px;"> git clone https://github.com/TechAppsSv/LostCore.git</p>
+<br>
+Asi usted tendra el codigo fuente de LostCore
+</h7>
+<br>
+<br>
+
+<h2 style="color: white; ">Implemetacion en su computador</h2>
+ <h7 style="color: white; text-align: center;">
+LostCore al hacer un proyecto con Electron y Node ustede debe instalara las dependencias o modulos necesarios 
+<br>
+debe de ejecutar lo siguiente desde su terminal desde la carpeta donde tiene el proyecto:
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">npm i</p>
+<br>
+O tambien puede ejecutar estos comandos
+<br>
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">npm install</p>
+<br>
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">npm audit</p>
+<br>
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">npm audit fix</p>
+
+<br>
+Asi usted tendra el codigo fuente de LostCore
+</h7>
+<br>
+<br>
+<h1 style="color: white; text-align: center; ">2.Escructura de archivos</h1>
+<h2 style="color: white; ">Archivos JSON</h2>
+<h7 style="color: white; text-align: center;">
+Este solo posee un archivo JSON que es el PACKAGE.JSON este es fundamental para el funcionamiento si se borra no funcionara su proyecto
+<br>
+Usted deberia de ver un archivo JSON similar o igual al siguiente:
+<br>
+<br>
+
+{
+    <br>
+    "name": "LostCore",
+    <br>
+    "version": "1.0.1",
+    <br>
+    "description": "",
+    <br>
+    "main": "src/index.js",
+    <br>
+    "scripts": {
+     <br>
+        "start": "electron src/index.js"
+   <br>
+    },
+    <br>
+    "keywords": [],
+   <br>
+    "author": "",
+    <br>
+    "license": "ISC",
+    <br>
+
+    "dependencies": {
+      
+      
+      <br>
+        "electron-navigation": "^1.5.8",
+     <br>
+        "update-electron-app": "^1.5.0"
+    <br>
+    },
+    <br>
+    "devDependencies": {
+      <br>
+        "electron-devtools-installer": "^3.1.1"
+     <br>
+    
+    }
+<br>  
+}
+
+
+</h7>
+<br>
+<br>
+<h2 style="color: white; ">Scripts</h2>
+<h7 style="color: white; text-align: center;">
+Para iniciar el proyecto inicial y sin ninguna modificacion usted desde su terminal en la carpeta del proyectod debe de ejecutar:
+<p style="color: black; background: white; width: 500px; border-radius: 5px;"> npm run start</p>
+<br>
+
+Asi usted vera que se le abre en una ventana el navegador
+</h7>
+<br>
+<br>
+
+<h2 style="color: white; ">Archivos JavScript</h2>
+<h7 style="color: white; text-align: center;">
+El proyecto solo incluuye un archivo de este tipo llamado index.js
+este es el que se encarga de el tamaño de las ventanas el archivo que cargara el nombre NO BORRAR porque si no se ejecutara
+<br>
+A continuacion se mostrara las partes mas importantes del archivo JS
+<br>
+Resolucion de la ventana inicial
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">mainWindow = new BrowserWindow({width: 1920, height: 1080, });</p>
+<br>
+Archivo a cargar al inicio
+
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">pathname: path.join(__dirname, 'views/charge.html'),
+</p>
+<br>
+
+</h7>
+<br>
+<br>
+
+<h2 style="color: white; ">Archivos HTML</h2>
+<h7 style="color: white; text-align: center;">
+El proyecto esta conformado mayoritareamente de archivos HTML los archivos presentes son:
+<br>
+charge.html: pantalla de inicio
+<br>
+index.html: Pantlla de vista principal
+<br>
+update.html: Vista de acerca de 
+
+<br>
+los archivos charge.html, update.html pueden ser eliminados
+<br>
+index.html:Es donde se ubica una barra lateral con a href para poner accesos directos ademas se encuentra la navegacion con electron-navigation
+que puede ser modificada facilmente
+</h7>
+
+<h2 style="color: white; ">Rutas especificas</h2>
+<h7 style="color: white; text-align: center;">
+Si usted no encuentra los archivos a continuacion se dice la ruta de archivos
+
+<br>
+Archivos JSON
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">/package.json</p>
+<br>
+Archivos HTML
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">/src/views/charge.html
+</p>
+<br>
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">/src/views/index.html
+</p>
+<br>
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">/src/views/update.html
+</p>
+<br>
+Archivos JS
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">/src/index.js</p>
+<br>
+Archivos Adicionales
+<br>
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">/LICENSE</p>
+<br>
+<p style="color: black; background: white; width: 500px; border-radius: 5px;">/src/views/style.css</p>
+
+</h7>
+<br>
+<br>
+<h1 style="color: white; text-align: center; ">3.Uso y compilacion y modificacion</h1>
+<h2 style="color: white; ">Modificacion</h2>
+<h7 style="color: white; text-align: center;">
+    La modificacion del proyecto usted podra entender facilmente el codigo sabiendo los Requerimientos ya antes mencionados
+<br>
+<h2 style="color: white; ">Uso</h2>
+<h7 style="color: white; text-align: center;">
+    Usted puede usar sin ningun problema LostCore como un navegador normal y corriente iniciandolo con  NPM RUN START  
+o puede modificarlo a su gusto
+<br>
+<h2 style="color: white; ">Compilacion</h2>
+<h7 style="color: white; text-align: center;">
+Para la compilacion usted necesitara usar alguna dependencia de NodeJs para compilacion de programas hechos en ElectronJs como por ejemplo: electron-package
+<br>
+<br>
+<h1 style="text-align: center; color: white;">Ahora sabes las bases del proyecto felicidades :D</h1>
+
+
+</h7>
+<br>
+<br>
+
+<!-- <br>
+
+    <h5 style="color: white; text-align: center;">Codigo Abierto: No</h5>
+ <h5 style="text-align: center; color: white;" >   <a href="https://techappssv.github.io/Tave/" style="color: white; text-align: center;">Ir a la pagina oficial</a></h5>
+ <br>
+ <h1 style="color: white; text-align: center; ">LostCore Browser</h1>
+ <h5 style="color: white; text-align: center;">Codigo Abierto: Si</h5>
+<h5 style="text-align: center; color: white;" >   <a href=../index.html style="color: white; text-align: center;">Ir a la pagina oficial</a></h5> -->
+</body>
+</html>
